@@ -185,4 +185,5 @@ wss.on('connection', (ws) => {
     })
 })
 
-server.listen(4001, console.log(`running on 4001`));
+const PORT = 4001;
+server.listen(PORT, console.log(`running on ${PORT}`));
