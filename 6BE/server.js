@@ -13,6 +13,16 @@ const wss = new WebSocket.Server({server});
 
 const prisma = new PrismaClient();
 
+// Connect to the database
+prisma.$connect()
+  .then(() => {
+    console.log('Database connected');
+  })
+  .catch((error) => {
+    console.error('Error connecting to the database:', error);
+  });
+
+
 getusername = () => {
     return "user" + Math.floor(Math.random() * 10);
 } 
