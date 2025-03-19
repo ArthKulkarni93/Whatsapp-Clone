@@ -196,4 +196,6 @@ wss.on('connection', (ws) => {
 })
 
 const PORT = process.env.PORT;
-server.listen(PORT, console.log(`running on ${PORT}`));
+server.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on 0.0.0.0:${PORT}`);
+});
